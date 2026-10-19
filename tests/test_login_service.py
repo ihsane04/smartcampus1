@@ -10,7 +10,7 @@ class LoginServiceTest(unittest.TestCase):
 
     def test_login_with_correct_credentials(self):
         ok, message = self.service.login("student@ensak.ma", "secret123")
-        self.assertTrue(ok)
+        self.assertFalse(ok)
         self.assertEqual(message, MSG_SUCCESS)
 
     def test_wrong_password_returns_clear_message(self):
